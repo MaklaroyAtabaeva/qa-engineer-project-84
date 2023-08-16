@@ -41,3 +41,36 @@ test-cases:
       Проверка авторизации нового пользователя через BitBucket
     status: fail
 
+- summary: |
+    Наличие иконок на переключателе языка (флажки English и Russian)
+  environment: |
+    status: fail
+
+- summary: |
+    Русский язык в переключателе не на русском
+  status: fail
+
+- summary: |
+    Отрицательное значение в двунаправленном счетчике указания цен
+  environment: |
+    status: fail
+
+- summary: |
+    Не полная русификация категории товаров
+  environment: |
+    status: fail
+
+- summary: |
+    Не русифицировано описание товара
+  environment: |
+    status: fail
+
+- summary: |
+    Теги не русифицированы
+  environment: |
+    status: fail
+
+- summary: |
+    Теги не работают
+  environment: |
+    status: pass

@@ -168,10 +168,72 @@ bugreports:
   - summary: |
       Проверка регистрации нового пользователя
     environment: |
-      Ссылка на билд/коммит/версия ПО и всего окружения
+      Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+      ОС Windows 10
     steps-to-reproduce: |
-      Полный перечень шагов для воспроизведения, на каком шаге произошла ошибка
+      1. Открыть главную страницу
+      2. Нажать на Log in
+      3. Нажать на Sing Up
+      4. Нажать Hobby
+      5. Ввести любое имя на английском
+      6.Нажать Continue
     expected-result: |
-      Какой результат должен был быть без ошибки
+      Дальнейшая регистрация пользователя
     actual-result: |
-      Какой результат получился на самом деле
+      Переключает на предыдущую страницу
+
+  - summary: |
+      Не русифицирована форма регистрации/авторизации пользователя
+    environment: |
+      Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Открыть главную страницу
+      2. Переключить язык на кнопке Languages на Russian
+      3. Нажать на Log in
+    expected-result: |
+      Форма регистрации/авторизации должно быть на русском языке
+    actual-result: |
+      Форма регистрации/авторизации на английском языке
+
+  - summary: |
+      Проверка авторизации нового пользователя через GitHub
+    environment: |
+      Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Открыть главную страницу
+      2. Нажать на Log in
+      3. Нажать на Continue with GitHub
+    expected-result: |
+      Дальнейшая регистрация пользователя
+    actual-result: |
+      Выводит сообщение "This user account is blocked."
+
+  - summary: |
+      Проверка авторизации нового пользователя через GitLab
+    environment: |
+      Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Открыть главную страницу
+      2. Нажать на Log in
+      3. Нажать на Continue with GitLab
+    expected-result: |
+      Дальнейшая регистрация пользователя
+    actual-result: |
+      Выводит сообщение "This user account is blocked."
+
+  - summary: |
+      Проверка авторизации нового пользователя через GitLab
+    environment: |
+      Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Открыть главную страницу
+      2. Нажать на Log in
+      3. Нажать на Continue with GitLab
+    expected-result: |
+      Дальнейшая регистрация пользователя
+    actual-result: |
+      Выводит сообщение "This user account is blocked."

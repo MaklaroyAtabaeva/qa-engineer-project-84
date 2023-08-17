@@ -225,14 +225,14 @@ bugreports:
       Выводит сообщение "This user account is blocked."
 
   - summary: |
-      Проверка авторизации нового пользователя через GitLab
+      Проверка авторизации нового пользователя через BitBucket
     environment: |
       Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
       ОС Windows 10
     steps-to-reproduce: |
       1. Открыть главную страницу
       2. Нажать на Log in
-      3. Нажать на Continue with GitLab
+      3. Нажать на Continue with BitBucket
     expected-result: |
       Дальнейшая регистрация пользователя
     actual-result: |
